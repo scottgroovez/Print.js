@@ -53,7 +53,6 @@ const Print = {
 function performPrint (iframeElement, params) {
   try {
     iframeElement.focus()
-
     // If Edge or IE, try catch with execCommand
     if (Browser.isEdge() || Browser.isIE()) {
       try {
@@ -73,8 +72,7 @@ function performPrint (iframeElement, params) {
       iframeElement.style.visibility = 'hidden'
       iframeElement.style.left = '-1px'
     }
-
-    cleanUp(params)
+    setTimeout(() => cleanUp(params), 100)
   }
 }
 
