@@ -72,6 +72,7 @@ function performPrint (iframeElement, params) {
       iframeElement.style.visibility = 'hidden'
       iframeElement.style.left = '-1px'
     }
+
     setTimeout(() => cleanUp(params), 100)
   }
 }
